@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:task_manager/components/category_card.dart';
 import 'package:task_manager/helpers/my_navigation.dart';
 import 'package:task_manager/models/tasks_model.dart';
 import 'package:task_manager/screens/task_details_page.dart';
@@ -64,14 +65,7 @@ class TaskCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      border: Border.all(color: Colors.black)),
-                  child: Text(task.priority),
-                ),
+                categoryCard(task.priority,Colors.black87),
                 IconButton.filled(
                     padding: const EdgeInsets.all(12),
                     style: IconButton.styleFrom(backgroundColor: Colors.black),
